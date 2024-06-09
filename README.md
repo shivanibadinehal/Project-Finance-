@@ -1,4 +1,4 @@
-# Client Financial Analysis with Excel
+# Comprehensive Financial Analysis and Reporting using Excel and PowerQuery 
 
 ## Table of Contents
 1. [Problem Statement](#problem-statement)
