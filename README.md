@@ -48,13 +48,17 @@ Data cleaning was performed in Power Query:
 - Unnecessary columns were removed from the Categories table.
 - Duplicate rows were removed from the Categories table.
 
-To ensure the accuracy of the dates in the `Date` column in each table, a date table was created for referencing using the M-formula:
+To ensure the accuracy of the dates in the Date column each of the tables, a date table was created for referencing using the M-formula:
 
-```m
+{Number.From(List.Min(Transactions[Date]))..Number.From(List.Max(Transactions[Date]))}
 
-This formula sets the start date to reflect the earliest to latest date in the dataset: January 01, 2021, to December 01, 2021.
+Here is a breakdown of what the formula does:
 
-Additional columns (Month, Month Name, Year) were extracted from the date table, which was then named Calendar.
+For the dataset, we want the start date to reflect the earliest to latest date that we have in the data: January 01, 2021 - December 01, 2021.
+
+Month, Month Name, Year columns were extracted from the date table
+
+The date table was named Calender.
 
 ### Data Modeling
 After cleaning and transforming the dataset, it was ready for modeling using Power Pivot:
