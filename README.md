@@ -51,3 +51,42 @@ Data cleaning was performed in Power Query:
 To ensure the accuracy of the dates in the `Date` column in each table, a date table was created for referencing using the M-formula:
 
 ```m
+
+This formula sets the start date to reflect the earliest to latest date in the dataset: January 01, 2021, to December 01, 2021.
+
+Additional columns (Month, Month Name, Year) were extracted from the date table, which was then named Calendar.
+
+### Data Modeling
+After cleaning and transforming the dataset, it was ready for modeling using Power Pivot:
+
+The Calendar table was marked as the official date table.
+Relationships were created:
+A one-to-many (*:1) relationship between the Budget and Calendar tables using the Date column.
+A one-to-many (*:1) relationship between the Transactions and Calendar tables using the Date column.
+A one-to-many (*:1) relationship between the Transactions and Categories tables using the Category column.
+A one-to-many (*:1) relationship between the Budget and Categories tables using the Category column.
+The relationships formed in the data model represent a Star Schema.
+
+### Data Visualization
+Data visualization was performed using Microsoft Excel:
+
+### Dashboard Worksheet: Displays the actual amount, budget amount, balance, etc., of the client.
+Figure 1 shows visualizations from the Dashboard worksheet.
+Data Analysis
+The measures used in visualization include:
+
+Actual = SUM(Transactions[Amount])
+Balance = SUM(Budget[Amount])
+Balance = [Budget] - [Actual]
+Based on the data visualization, the following can be deduced for the year ending December 2021:
+
+The client budgeted a total amount of $230,502.
+The client spent a total amount of $193,228.
+The client has a balance of $37,274.
+Insights
+The analysis reveals the following insights:
+
+The client spent the most in the month of January.
+The client spent the least in the month of November.
+The highest spending category was Social.
+Key Note: The client has a monthly budget amount of more than $16k and has been able to stay within this budget, indicating financial stability sufficient for monetary investment.
