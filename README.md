@@ -15,7 +15,7 @@
 The objective of this analysis is to assist the client in unlocking the potential of financial analysis and reporting. The goal is to produce comprehensive insights into the client's finances using her financial data.
 
 ## Data Sourcing
-The dataset used for this analysis was provided by our professor extracted frm one of the public datasets domains. Attached the dataset for reference: 
+The dataset used for this analysis was provided by our professor and extracted from a public dataset domain. The dataset is attached for reference.
 
 ## Data Preparation
 The data transformation was performed in Power Query and the dataset was loaded into Microsoft Excel Power Pivot for modeling. The client's financial data consists of two worksheets containing two tables:
@@ -140,5 +140,5 @@ Various visualizations were included to highlight spending patterns, budget adhe
 ### Solution:
 Detailed analysis was conducted using the visualizations and measures, leading to insights such as the highest and lowest spending months and categories.
 Key findings were summarized, demonstrating the client's ability to stay within the budget and highlighting areas for potential financial adjustments or investments.
-By addressing these challenges systematically, the project was able to provide the client with accurate, reliable, and insightful financial analysis.
+By addressing these challenges systematically, the project was able to provide accurate, reliable, and insightful financial analysis.
 
